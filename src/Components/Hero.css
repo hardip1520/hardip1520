@@ -1,0 +1,28 @@
+.hero-component{
+    background-image: url(../Accets/Images/iStock-913010334-1536x396.jpeg) ;
+    
+}
+.hero-content {
+    padding: 62px 0px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 120px;
+}
+.hero-heading {
+    font-size: 4.44em;
+    color: #fff;
+}
+.hero-text{
+font-size: 1.67rem;
+    line-height: 3.11rem;
+    color: #fff;
+}
+.hero-btn{
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: blueviolet;
+    width: 200px;
+    border: none;
+}
