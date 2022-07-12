@@ -1,0 +1,22 @@
+{
+  "users": [
+    
+    {
+      "role": "buy",
+      "fullname": "hardip",
+      "number": "123456",
+      "emailid": "harip@gmail.com",
+      "password": "456789",
+      "id": 2
+    }
+  ],
+  "agent": [
+    {
+      "role": "sell",
+      "fullname": "hardip",
+      "number": "5479464796",
+      "emailid": "harsh21@gmail.com",
+      "id": 1
+    }
+  ]
+}

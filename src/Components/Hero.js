@@ -1,8 +1,12 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Hero.css";
 
+
 const Hero = () => {
+  const navigate = useNavigate();
+
+
   return (
     <>
       <div className="hero-component">
@@ -13,7 +17,7 @@ const Hero = () => {
             you're getting financing.
           </p>
           <div className="hero-button">
-            <button type="button" className="hero-btn" onClick={()=>{Navigate('/register')}}>Register</button>
+            <button type="button" className="hero-btn" onClick={()=>navigate("/register")}>Register</button>
           </div>
         </div>
       </div>

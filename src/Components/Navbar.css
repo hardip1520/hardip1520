@@ -54,4 +54,6 @@ a.nav-form {
     margin: 0 12px;
     text-decoration: none;
 }
-
+.logo{
+  cursor: pointer;
+}

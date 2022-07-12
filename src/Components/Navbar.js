@@ -1,13 +1,16 @@
 import React from 'react'
 import './Navbar.css'
+import { useNavigate } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
+
+  const navigate = useNavigate();
   return (
    <>
    <div>
    <nav className="navbar">
-        <div className="logo">
+        <div className="logo" onClick={()=>navigate("/")}>
           <h2>
             <span>R</span>EAL
             <span>S</span>URE
