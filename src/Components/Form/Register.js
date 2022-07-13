@@ -3,7 +3,7 @@ import "./Register.css";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { postAllData } from "../../Actions/actions";
+import { postAllData } from '../../Actions/Useractions'
 
 const Register = () => {
   const Navigate = useNavigate();
@@ -18,13 +18,11 @@ const Register = () => {
   const handleChange = (event) => {
     const { name, value } = event.target;
     setINITFormData({ ...initformdata, role:radio,[name]: value });
-    console.log(initformdata)
   };
 
   const fineldata = async (e) => {
 
     dispatch(postAllData(initformdata))
-    console.log(initformdata)
 
     Navigate("/");
   };

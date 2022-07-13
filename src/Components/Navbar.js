@@ -12,8 +12,8 @@ const Navbar = () => {
    <nav className="navbar">
         <div className="logo" onClick={()=>navigate("/")}>
           <h2>
-            <span>R</span>EAL
-            <span>S</span>URE
+            <span>H</span>ARRY
+            <span>RE</span> 
           </h2>
         </div>
         <div className="menu-NavLink">

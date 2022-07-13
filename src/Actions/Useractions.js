@@ -16,3 +16,8 @@ export const postAllData = (data) =>  async (dispatch, getState) => {
     }
     dispatch({ type: 'APIPOST', payload: data})
 }
+
+export const createProperty = (adddata) => async(dispatch) =>{
+     const res = await axios.post()
+       
+}
