@@ -31,11 +31,12 @@ const handleDelete = async (id) => {
  return(
 	<>
 	<div>
-
+	<h1>Details of Properties</h1>
 		{jdata.map((e,index)=>(
 			<>
+			
 			<div className="detail-table">
-				<h1>Details of Properties</h1>
+				
 			<table>
   <tr>
     <th>Name</th>

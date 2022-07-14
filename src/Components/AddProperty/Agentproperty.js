@@ -129,7 +129,7 @@ const Agentproperty = () => {
                 placeholder="say something about property.."
                 className="add-feild"
                 autoComplete="off"
-                name="emailid"
+                name="description"
                 onChange={handleChange}
               />
               
