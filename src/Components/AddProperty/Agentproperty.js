@@ -1,30 +1,60 @@
 import React, { useState } from "react";
 import Addimg from "../../Accets/Images/addproperty.png";
 import "./Agentproperty.css";
-import { postallProperties } from "../../Actions/Agentactions";
+import { getProperty} from "../../Actions/Agentactions";
 import { useDispatch } from "react-redux";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Agentproperty = () => {
 
   const dispatch= useDispatch();
 
-  const [property,setproperty] = useState({})
+  const navigate = useNavigate();
+
+  const [property,setproperty] = useState({image:null})
 
 
-  const handleChange = (event) => {
-    
-    const {name, value} =  event.target;
-    setproperty({...property, [name]:value})
+  const convertBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file);
+      fileReader.onload = () => {
+        resolve(fileReader.result);
+      };
+      fileReader.onerror = (error) => {
+        reject(error);
+      };
+    });
+  };
+
+
+  const handleSubmit =async (e) =>{
+ 
+    e.preventDefault();
+
+    axios
+    .post("http://localhost:5000/properties", property)
+      .then((response) => response.property)
+      .then(() => {
+        dispatch(getProperty());
+        navigate("/agentproperty")
+      });
 
   }
 
-const handleAdd = async(e) =>{
- 
-dispatch(postallProperties(property))
+  const handleChange = (event) => {
+    const {name, value} =  event.target;
+    setproperty({...property, [name]:value})
+  }
 
-}
+    const handleUpload = async(e) =>{
+     let g = e.target.files[0];
+     const file = await convertBase64(g);
+     setproperty({...property,image:file})
+    }
 
-console.log(property)
+
   return (
     <>
       <div className="add-container">
@@ -33,7 +63,7 @@ console.log(property)
           <img src={Addimg} width="500" height="300" />
         </div>
         <div className="add-form">
-          <form>
+          <form onSubmit={(e)=>handleSubmit(e)}>
             <div className="add-details">
             <label for="name">Full Name</label>
               <input
@@ -82,7 +112,15 @@ console.log(property)
                 <span>Rent</span>
               </label>
             </div>
-
+            <div className="add-details">
+              <input
+                type="file"
+                className="add-feild"
+                name="image"
+                onChange={handleUpload}
+              />
+             
+            </div>
             <div className="add-details">
             
               <textarea
@@ -96,7 +134,7 @@ console.log(property)
               />
               
             </div>
-            <button className="add-property-btn"  onClick={handleAdd}>Post Your Property</button>
+            <button className="add-property-btn">Post Your Property</button>
           </form>
         </div>
       </div>

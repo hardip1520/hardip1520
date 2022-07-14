@@ -29,8 +29,10 @@ const CustomerLogin = () => {
 
         if (user) {
           console.log(user);
+          navigate("/userarea")
         } else {
           console.log("not Match");
+          alert("Not Match");
         }
       });
   };

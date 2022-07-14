@@ -1,12 +1,18 @@
 import axios from "axios";
 import React from "react";
+import "./Form.css";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const AgentLogin = () => {
-  const initialValues = {
+
+
+const initialValues = {
     emailid: "",
     password: "",
   };
+
+  const navigate = useNavigate()  
 
   const [formValues,setFormValues]= useState(initialValues)
 
@@ -17,29 +23,34 @@ const AgentLogin = () => {
     .get('http://localhost:5000/agent')
     .then((response)=>response.data)
     .then((userdata)=>{
-    const user = userdata.find((e)=>e.emailid === formValues.emailid && e.password ===formValues.password );
+    const user = userdata.find(
+      (e)=>
+      e.emailid === formValues.emailid && 
+      e.password ===formValues.password 
+      );
 
     if(user){
+      navigate("/addproperty")
       console.log("match")
     }
     else{
-      console.log("no match")
+      alert("invalid username or password")
+      console.log("invalid")
     }
     })
   }
 
   const handleChange =(event)=>{
-    const[name,value] = event.target;
+    const {name,value} = event.target;
     setFormValues({...formValues, [name]:value})
 
   }
 
 
-
   return (
     <>
       <div className="register-container">
-        <form onClick={(e)=>handleSubmit(e)}>
+        <form onSubmit={(e)=>handleSubmit(e)}>
           <div className="form">
             <div className="title">Welcome Agent</div>
             <div className="subtitle">Log In Here</div>
@@ -72,7 +83,8 @@ const AgentLogin = () => {
             </div>
             <button 
             type="text"
-             className="submit">
+             className="submit"
+            >
               Login
             </button>
           </div>

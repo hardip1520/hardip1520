@@ -8,6 +8,8 @@ import Register from './Components/Form/Register'
 import Subnav from './Components/Subnav';
 import AgentLogin from './Components/Form/AgentLogin';
 import Agent from './Pages/Agent'
+import Agenthouse from './Pages/AgentHouses/AgentHouse'
+import Userarea from './Pages/Userarea/Userarea';
 
 function App() {
   return (
@@ -22,6 +24,9 @@ function App() {
     <Route path='user' element={<CustomerLogin/>}/>
     <Route path='agent' element={<AgentLogin/>}/>
     <Route path='addproperty' element={<Agent/>}/>
+    <Route path='agentproperty' element={<Agenthouse/>}/>
+    <Route path='userarea' element={<Userarea/>}/>
+    
   </Routes>
 
   <div className='footer-container'>

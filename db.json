@@ -23,6 +23,22 @@
       "emailid": "harsh123@gmail.com",
       "password": "123456",
       "id": 4
+    },
+    {
+      "role": "buy",
+      "fullname": "hardip",
+      "number": "165165165165",
+      "emailid": "shail@123@gmail.com",
+      "password": "789",
+      "id": 5
+    },
+    {
+      "role": "buy",
+      "fullname": "hardip",
+      "number": "165165165165",
+      "emailid": "shail@123@gmail.com",
+      "password": "789",
+      "id": 6
     }
   ],
   "agent": [
@@ -40,6 +56,22 @@
       "emailid": "hardip123@gamil.com",
       "password": "123456",
       "id": 2
+    },
+    {
+      "role": "sell",
+      "fullname": "hardip",
+      "number": "9653277851",
+      "emailid": "harry12@gmail.com",
+      "password": "1520",
+      "id": 3
+    },
+    {
+      "role": "sell",
+      "fullname": "hardipsinh j matroja ",
+      "number": "9865232447",
+      "emailid": "harry@gmail.com",
+      "password": "152000",
+      "id": 4
     }
   ],
   "properties": []

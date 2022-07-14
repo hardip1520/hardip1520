@@ -1,0 +1,27 @@
+table, th, td {
+	border:1px solid black;
+	padding: 10px;
+  }
+  .detail-table {
+    display: flex;
+    justify-content: center;
+    margin: 10em 10em;
+    flex-direction: column;
+}
+	.detail-btn {
+		padding: 5px;
+		width: 71px;
+		border-radius: 10px;
+		background: aqua;
+		font-weight:800;
+	}
+	.detail-btn:hover{
+		padding: 5px;
+		width: 71px;
+		border-radius: 10px;
+		background: rgb(0, 0, 0);
+		color: #fff;
+		transition: 0.5s;
+		font-weight:800;
+	}
+

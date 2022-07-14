@@ -1,15 +1,15 @@
-const initialState = {
-  products: [],
-};
+// const initialState = {
+//   products: [],
+// };
 
-export const addProducts = (state = [], action) => {
+const addProperties = (state = {allProducts:[], singleProduct:{}}, action) => {
   switch (action.type) {
     case "ADD":
-      return action.payload;
-    case "ADD_PROPERTY":
-      return action.payload;
+      return {...state, allProducts: action.payload}
+    // case "ADD_PROPERTY":
+    //   return action.payload;
     default:
       return state;
   }
 };
-export default addProducts;
+export default addProperties;
