@@ -6,7 +6,6 @@ I'm a passionate **Full-Stack Developer** and **Cloud Engineer** focused on buil
 
 ## 🚀 What I’m Working On
 
-- 🧾 **SplitMart** – A full-stack expense sharing app (MERN + EKS + Auth)
 - 🧠 **AI Job Agent** – Custom GPT/agent that auto-generates job-tailored applications
 - 🛠 **WordPress on AWS EKS** – Highly available & scalable containerized deployment
 
