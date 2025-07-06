@@ -14,12 +14,12 @@ I'm a passionate **Full-Stack Developer** and **Cloud Engineer** focused on buil
 
 ## 🧰 Tech Stack
 
-*Languages:** JavaScript, TypeScript, Java, Python  
-*Frontend:** React.js, Next.js, Tailwind CSS, Elementor  
-*Backend:** Node.js, Express, MongoDB, PostgreSQL  
-*Cloud/DevOps:** AWS (EC2, S3, RDS, EKS, ECR), Docker, GitHub Actions  
-*AI Tools:** LangChain, OpenAI, Ollama, GPT Agents  
-*CMS:** WordPress, WooCommerce
+Languages: JavaScript, TypeScript, Java, Python  
+Frontend: React.js, Next.js, Tailwind CSS, Elementor  
+Backend: Node.js, Express, MongoDB, PostgreSQL  
+Cloud/DevOps: AWS (EC2, S3, RDS, EKS, ECR), Docker, GitHub Actions  
+AI Tools: LangChain, OpenAI, Ollama, GPT Agents  
+CMS: WordPress, WooCommerce
 ---
 
 ## 📫 Connect with Me
